@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8" />
+        <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1, shrink-to-fit=no"
+        />
+        <!-- Bootstrap CSS -->
+        <link
+            rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
+            integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2"
+            crossorigin="anonymous"
+        />
+        <link
+            rel="stylesheet"
+            href="{{ url_for('static', filename='css/style.css') }}"
+        />
+        <title>Fashion World!</title>
+    </head>
+    <body>
+        <nav class="navbar navbar-expand-lg navbar-dark b">
+            <a class="navbar-brand" href="#">Fashion World</a>
+            <button
+                class="navbar-toggler"
+                type="button"
+                data-toggle="collapse"
+                data-target="#navbarNav"
+                aria-controls="navbarNav"
+                aria-expanded="false"
+                aria-label="Toggle navigation"
+            >
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#"
+                            >Home <span class="sr-only">(current)</span></a
+                        >
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">About Project</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Predict</a>
+                    </li>
+                    <li class="nav-item">
+                        <a
+                            class="nav-link disabled"
+                            href="#"
+                            tabindex="-1"
+                            aria-disabled="true"
+                            >Contact us</a
+                        >
+                    </li>
+                </ul>
+            </div>
+        </nav>
+
+        <div
+            id="carouselExampleCaptions"
+            class="carousel slide"
+            data-ride="carousel"
+        >
+            <ol class="carousel-indicators">
+                <li
+                    data-target="#carouselExampleCaptions"
+                    data-slide-to="0"
+                    class="active"
+                ></li>
+                <li
+                    data-target="#carouselExampleCaptions"
+                    data-slide-to="1"
+                ></li>
+                <li
+                    data-target="#carouselExampleCaptions"
+                    data-slide-to="2"
+                ></li>
+            </ol>
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img
+                        src="{{ url_for('static', filename='images/Blog-cover1.jpg') }}"
+                        class="d-block w-100"
+                        alt="..."
+                    />
+                </div>
+                <div class="carousel-item">
+                    <img
+                        src="{{ url_for('static', filename='images/Blog-cover2.jpg') }}"
+                        class="d-block w-100"
+                        alt="..."
+                    />
+                </div>
+                <div class="carousel-item">
+                    <img
+                        src="{{ url_for('static', filename='images/Blog-cover3.jpg') }}"
+                        class="d-block w-100"
+                        alt="..."
+                    />
+                    <div class="carousel-caption d-none d-md-block"></div>
+                </div>
+            </div>
+            <a
+                class="carousel-control-prev"
+                href="#carouselExampleCaptions"
+                role="button"
+                data-slide="prev"
+            >
+                <span
+                    class="carousel-control-prev-icon"
+                    aria-hidden="true"
+                ></span>
+                <span class="sr-only">Previous</span>
+            </a>
+            <a
+                class="carousel-control-next"
+                href="#carouselExampleCaptions"
+                role="button"
+                data-slide="next"
+            >
+                <span
+                    class="carousel-control-next-icon"
+                    aria-hidden="true"
+                ></span>
+                <span class="sr-only">Next</span>
+            </a>
+        </div>
+        <div class="title">
+            <h1>FASHION PRODUCT RECOMMENDEDATIONS</h1>
+        </div>
+        <div class="about-Project">
+            <h1>About Project</h1>
+            <p>
+                This project developed an advanced convolutional neural network
+                (CNN) model for an e-commerce fashion product recommendation
+                system. Trained on 15,000 diverse images, the model uses
+                ResNet50 for detailed feature extraction and k-nearest neighbors
+                (KNN) for identifying similar products. ResNet50 captures
+                intricate image patterns, while KNN finds the five most similar
+                items based on feature proximity. This model enhances e-commerce
+                platforms by providing personalized product recommendations,
+                helping customers quickly find preferred items and increasing
+                satisfaction. It creates cross-selling opportunities, boosts
+                sales, and aids in inventory management by identifying popular
+                trends. Personalized recommendations also drive marketing
+                engagement and conversion rates, contributing to a more dynamic,
+                customer-centric shopping experience.
+            </p>
+        </div>
+
+        <div class="Recomendation-uploading">
+            <h1>Upload An Image,<br />Get Recommendations</h1>
+        </div>
+        <form
+            class="was-validated"
+            action="/"
+            method="post"
+            enctype="multipart/form-data"
+        >
+            <div class="custom-file">
+                <input
+                    type="file"
+                    class="file-input"
+                    id="validatedCustomFile"
+                    name="file"
+                    required
+                />
+                <label class="custom-file-label" for="validatedCustomFile"
+                    >Choose file...</label
+                >
+            </div>
+            <button type="submit" class="btn btn-primary">Upload</button>
+        </form>
+        {% include "prediction_page.html" %}
+
+        <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
+        <script
+            src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+            integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+            crossorigin="anonymous"
+        ></script>
+        <script
+            src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx"
+            crossorigin="anonymous"
+        ></script>
+    </body>
+</html>

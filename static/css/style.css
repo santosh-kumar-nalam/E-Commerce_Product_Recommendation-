@@ -1,0 +1,85 @@
+.navbar {
+    background-color: rgb(186, 44, 44);
+}
+
+.form-inline input {
+    width: 0.5rem;
+}
+
+.title {
+    text-align: center;
+    color: rgb(160, 17, 160);
+    padding: 0;
+}
+
+.about-Project h1 {
+    font-size: 42px;
+    font-weight: bold;
+    text-align: center;
+    color: rgb(3, 102, 3);
+    text-shadow: 0 0 1px yellow; /* Fixed text-shadow */
+}
+
+.about-Project p {
+    text-align: center;
+    padding: 10px 50px;
+    color: rgb(4, 79, 104);
+    font-weight: normal;
+    font-size: 20px;
+}
+
+.Recomendation-uploading {
+    text-align: center;
+    padding-top: 4px;
+    line-height: normal;
+}
+
+.card {
+    display: inline-block;
+    margin-left: 40px;
+    padding-top: 30px;
+    padding-left: 20px;
+}
+
+.card:hover {
+    /* Fixed :hover selector */
+    transform: scale(1.15);
+}
+
+.card img {
+    transition: all 0.3s;
+    float: left;
+    text-align: center;
+    z-index: 1;
+}
+
+.was-validated {
+    text-align: center;
+}
+
+.custom-file {
+    width: 500px;
+}
+
+.Recommendations img {
+    padding-left: 300px;
+    width: 180px;
+    height: 200px;
+}
+
+.recommendation-page {
+    background-color: rgb(53, 53, 90);
+    text-align: center;
+}
+
+.recommendation-page h1 {
+    color: white;
+    font-size: 72px;
+}
+.images {
+    background-color: rgb(221, 223, 227);
+    width: 1150px;
+    height: 325px;
+    padding-top: 22px;
+    padding-right: 35px;
+}

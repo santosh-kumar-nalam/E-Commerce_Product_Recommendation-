@@ -1,0 +1,89 @@
+body {
+    margin: 0px;
+    padding: 0px;
+    border-radius: 0px;
+}
+.banner {
+    position: relative;
+    width: 100%;
+    height: 200px; /* Specify the height of the container */
+}
+.banner-image {
+    width: 100%;
+    height: 100%;
+    background-size: cover; /* Adjust to 'contain' if needed */
+    background-repeat: no-repeat; /* Prevents the image from repeating */
+    background-position: center; /* Center the image */
+    background-image: url("sample_images/bg_image.jpg");
+    opacity: 0.5;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 0; /* Ensure image is below the text */
+}
+
+.title {
+    color: rgb(35, 0, 75);
+    text-shadow: 1px white;
+    position: absolute;
+    top: 50%;
+    left: 350px;
+    transform: translateY(-50%);
+
+    font-size: 60px;
+    font-family: sans-serif;
+    font-weight: bold;
+    z-index: 1; /* Ensure text is above the image */
+}
+
+.container {
+    display: grid;
+    align-items: center;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 5px;
+}
+
+.image {
+    padding-left: 150px;
+    padding-top: 50px;
+    margin-bottom: 0px;
+}
+.image img {
+    height: 425px;
+    width: 425px;
+}
+
+.text h1 {
+    font-size: 40px;
+    text-align: center;
+    padding-bottom: 12px;
+    color: red;
+    z-index: 1;
+}
+.text p {
+    font-size: 25px;
+    line-height: normal;
+    font-family: cursive;
+    text-align: justify;
+}
+.btn-try-once {
+    text-align: center;
+}
+
+.was-validated {
+    text-align: center;
+}
+.custom-file {
+    width: 500px;
+}
+.Recomendation-upload {
+    text-align: center;
+    padding-top: 120px;
+    line-height: normal;
+}
+
+.Recommendations img {
+    padding-left: 300px;
+    width: 180px;
+    height: 200px;
+}

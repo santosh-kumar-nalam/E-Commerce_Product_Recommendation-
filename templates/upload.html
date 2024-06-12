@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Upload Image</title>
+        <link
+            rel="stylesheet"
+            href="{{ url_for('static', filename='css/styles.css') }}"
+        />
+    </head>
+    <body>
+        <div class="recommendation-upload">
+            <h1>Upload An Image,<br />Get Recommendations</h1>
+        </div>
+        <form
+            class="was-validated"
+            action="/"
+            method="post"
+            enctype="multipart/form-data"
+        >
+            <div class="custom-file">
+                <input
+                    type="file"
+                    class="file-input"
+                    id="validatedCustomFile"
+                    name="file"
+                    required
+                />
+                <label class="custom-file-label" for="validatedCustomFile"
+                    >Choose file...</label
+                >
+            </div>
+            <button type="submit">Upload</button>
+        </form>
+    </body>
+</html>
