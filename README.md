@@ -18,7 +18,7 @@ This project implements an advanced Convolutional Neural Network (CNN) model for
 4. **Integration**: Integrate the trained model into your e-commerce platform for personalized product recommendations.
 
 ## Sample Video
-[Link to Sample Video](#)
+https://drive.google.com/file/d/1QRMn851X5Psbr8K0IMYubb_N8H287KqD/view?usp=drive_link
 
 ## Dependencies
 - Python 3.x
